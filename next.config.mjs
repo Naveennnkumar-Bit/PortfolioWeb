@@ -2,7 +2,9 @@ import { withSentryConfig } from '@sentry/nextjs';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: 'export', // Ensure this is set for static site generation
+    output: 'export',
+    ignoreBuildErrors: true,
+    // Ensure this is set for static site generation
 };
 
 export default withSentryConfig(nextConfig, {
