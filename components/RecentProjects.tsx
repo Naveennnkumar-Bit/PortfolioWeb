@@ -2,7 +2,12 @@
 
 import { FaLocationArrow } from "react-icons/fa6";
 import { projects } from "@/data";
-import { PinContainer } from "./ui/Pin";
+import dynamic from "next/dynamic";
+
+// Dynamically import the PinContainer component and disable SSR
+const PinContainerClientOnly = dynamic(() => import("./ui/Pin"), {
+  ssr: false, // This disables SSR for this component
+});
 
 const RecentProjects = () => {
   return (
@@ -17,7 +22,7 @@ const RecentProjects = () => {
             className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
             key={item.id}
           >
-            <PinContainer title="" href={item.link}>
+            <PinContainerClientOnly title="" href={item.link}>
               <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
                 <div
                   className="relative w-full h-full overflow-hidden lg:rounded-3xl"
@@ -74,7 +79,7 @@ const RecentProjects = () => {
                   </a>
                 </div>
               </div>
-            </PinContainer>
+            </PinContainerClientOnly>
           </div>
         ))}
       </div>
