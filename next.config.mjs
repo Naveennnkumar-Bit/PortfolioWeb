@@ -2,8 +2,8 @@ import { withSentryConfig } from '@sentry/nextjs';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: 'export',
-    ignoreBuildErrors: true,
+    distDir: 'out', // Default output directory for static files
+
     // Ensure this is set for static site generation
 };
 
