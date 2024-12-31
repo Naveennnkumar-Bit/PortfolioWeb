@@ -82,7 +82,7 @@ export const projects = [
     title: "Data Analysis",
     des: "My Youtube Watch Habits",
     img: "/p2.webp",
-    iconLists: ["/python.png", "/pdn.png", "/matplotlib.png", "/seaborn-1.svg", "/nltk.png"],
+    iconLists: ["/python.png", "/pdn.png", "/Matplotlib.png", "/seaborn-1.svg", "/nltk.png"],
     link: "https://github.com/Naveennnkumar-Bit/My-YouTube-Watch-Habits",
   },
   {
@@ -98,7 +98,7 @@ export const projects = [
     title: "SQL & Python",
     des: "Sales and Customer Analysis",
     img: "/p4.webp",
-    iconLists: ["/mysql.svg", "/python.png", "/anaconda.svg", "/NumPy.svg", "/pdn.png"],
+    iconLists: ["/MYSQL.svg", "/python.png", "/Anaconda.svg", "/NumPy.svg", "/pdn.png"],
     link: "https://github.com/Naveennnkumar-Bit/SQL_Python_E-commerce_Project",
   },
   {
@@ -106,7 +106,7 @@ export const projects = [
     title: "Data Science",
     des: "Student Performance Prediction ",
     img: "/SPP.webp",
-    iconLists: ["/anaconda.svg", "/pdn.png","/seaborn-1.svg", "/NumPy.svg", "/sl.svg"],
+    iconLists: ["/Anaconda.svg", "/pdn.png","/seaborn-1.svg", "/NumPy.svg", "/sl.svg"],
     link: "https://github.com/Naveennnkumar-Bit/mlprojects",
   },
     {
