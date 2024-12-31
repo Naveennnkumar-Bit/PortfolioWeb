@@ -54,7 +54,7 @@ export const BentoGridItem = ({
 }) => {
   const leftLists = ["ML", "MS Excel", "Python"];
   const rightLists = ["SQL", "PowerBI", "Data Science"];
-
+  
   const [copied, setCopied] = useState(false);
 
   const defaultOptions = {
@@ -67,7 +67,7 @@ export const BentoGridItem = ({
   };
 
   const handleCopy = () => {
-    const text = "naveennnkumar.03@gmail.com";
+    const text = "hsu@jsmastery.pro";
     navigator.clipboard.writeText(text);
     setCopied(true);
   };

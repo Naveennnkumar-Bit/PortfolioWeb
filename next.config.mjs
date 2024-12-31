@@ -1,8 +1,12 @@
 import { withSentryConfig } from '@sentry/nextjs';
 
 const nextConfig = {
-    distDir: 'out', // Default output directory for static files
-    output: 'export', // Enable static site generation compatibility
+    distDir: 'out', // Default output directory for static files (use if exporting statically)
+    reactStrictMode: true, // Enable React Strict Mode (optional)
+    // Optional: Use experimental features (if needed)
+    experimental: {
+        // Enable features here if necessary (e.g., React Server Components)
+    },
 };
 
 const sentryOptions = {
