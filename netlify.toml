@@ -1,0 +1,7 @@
+[build]
+  base = "/"  # Root directory
+  command = "npm run build"  # Build command
+  publish = ".next"  # Output directory
+
+[functions]
+  directory = "netlify/functions"  # Directory for serverless functions (if applicable)
