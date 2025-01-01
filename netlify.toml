@@ -1,7 +1,9 @@
 [build]
-  base = "/"  # Root directory
-  command = "npm run build"  # Build command
-  publish = ".next"  # Output directory
+  base = "/"  # Root directory (make sure this is correct if your repo structure is different)
+  command = "npm run build"  # Command to build your app
+  publish = ".next"  # Directory for Next.js build output
+  # If you're using Next.js static export (next export), use:
+  # publish = "out"  # For static sites exported by Next.js
 
 [functions]
-  directory = "netlify/functions"  # Directory for serverless functions (if applicable)
+  directory = "netlify/functions"  # Directory for serverless functions, if applicable
