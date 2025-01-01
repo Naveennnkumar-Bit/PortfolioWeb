@@ -1,4 +1,4 @@
-const { withSentryConfig } = require('@sentry/nextjs');
+import { withSentryConfig } from '@sentry/nextjs';
 
 const nextConfig = {
     distDir: 'out', // Use if exporting the app as static files
@@ -23,4 +23,4 @@ const sentryConfig = {
 };
 
 // Export the configuration
-module.exports = withSentryConfig(nextConfig, sentryOptions, sentryConfig);
+export default withSentryConfig(nextConfig, sentryOptions, sentryConfig);
