@@ -98,7 +98,7 @@ export const projects = [
     title: "SQL & Python",
     des: "Sales and Customer Analysis",
     img: "/p4.webp",
-    iconLists: ["/MYSQL.svg", "/python.png", "/Anaconda.svg", "/NumPy.svg", "/pdn.png"],
+    iconLists: ["/MySQL.svg", "/python.png", "/Anaconda.svg", "/NumPy.svg", "/pdn.png"],
     link: "https://github.com/Naveennnkumar-Bit/SQL_Python_E-commerce_Project",
   },
   {
