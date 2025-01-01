@@ -1,26 +1,26 @@
-import { withSentryConfig } from '@sentry/nextjs';
+const { withSentryConfig } = require('@sentry/nextjs');
 
 const nextConfig = {
-    distDir: 'out', // Default output directory for static files (use if exporting statically)
-    reactStrictMode: true, // Enable React Strict Mode (optional)
-    // Optional: Use experimental features (if needed)
+    distDir: 'out', // Use if exporting the app as static files
+    reactStrictMode: true, // Enable React Strict Mode
     experimental: {
-        // Enable features here if necessary (e.g., React Server Components)
+        // Optional: Enable experimental features (e.g., React Server Components) if necessary
     },
 };
 
 const sentryOptions = {
-    silent: true, // Suppresses source map upload logs
-    org: "personal-r52", // Replace with your organization slug
-    project: "portfolio-website", // Replace with your project slug
+    silent: true, // Suppress logs during source map uploads
+    org: "personal-r52", // Replace with your actual Sentry organization slug
+    project: "portfolio-website", // Replace with your actual Sentry project slug
 };
 
 const sentryConfig = {
-    widenClientFileUpload: false, // Disable since it's unnecessary for static sites
-    transpileClientSDK: false,   // Disable IE11 compatibility for smaller bundle size
-    hideSourceMaps: true,        // Hides source maps in the client bundle
-    disableLogger: true,         // Reduces bundle size by removing Sentry logs
-    automaticVercelMonitors: false, // Disable as it depends on Vercel's dynamic capabilities
+    widenClientFileUpload: false, // Skip widening source map upload paths
+    transpileClientSDK: false, // Disable IE11 compatibility for smaller bundles
+    hideSourceMaps: true, // Hide source maps in the client-side bundle
+    disableLogger: true, // Remove Sentry logs to reduce bundle size
+    automaticVercelMonitors: false, // Disable if not using Vercel's dynamic monitoring
 };
 
-export default withSentryConfig(nextConfig, sentryOptions, sentryConfig);
+// Export the configuration
+module.exports = withSentryConfig(nextConfig, sentryOptions, sentryConfig);
